@@ -1,0 +1,55 @@
+node-gyp
+
+离线安装 node-gyp
+
+
+https://nodejs.org/download/release/v12.14.1/node-v12.14.1-headers.tar.gz
+
+https://nodejs.org/download/release/v12.14.1/win-x64/node.lib
+
+复制到离线机器上，解压 headers.tar.gz
+上一步解压出来的目录中，在 include 文件夹的同级目录新建一个 Release 文件夹
+将 node.lib 复制到 Release 文件夹中。
+执行下面的命令：
+npm config set nodedir <include 和 Release 的父文件夹的路径>
+现在就能在离线机器上正常使用 node-gyp 
+
+node 包的位置：
+%localappdata%/node-gyp/cache/ 
+
+设置环境变量 
+$env:NODE_TLS_REJECT_UNAUTHORIZED = 0
+
+注意npm config 的strict-ssl也设置为false
+
+
+1.ripgrep
+
+本机上的临时文件夹对应package.json
+
+url中的tag对应node_modules/@vscode/ripgrep/lib/postinstall.js中的VERSION
+
+https://api.github.com/repos/microsoft/ripgrep-prebuilt/releases/tags/v13.0.0-4
+
+ 
+
+需要的版本
+
+x86_64-pc-windows-msvc.zip
+
+x86_64-unknown-linux-musl.tar.gz
+aarch64-unknown-linux-gnu.tar.gz
+ 
+2.header文件
+设置好终端代理，直接用下面的命令，从外网下载缓存
+node-gyp install --dist-url "https://electronjs.org/headers" "19.1.9"
+19.1.9就是.yarnrc上的target字段
+这个步骤就会下载缓存，地址是
+%localappdata%/node-gyp/cache/
+ 
+如果终端上下载有网络问题，可以用下面的链接手动下载
+https://electronjs.org/headers/v19.1.9/node-v19.1.9-headers.tar.gz
+https://electronjs.org/headers/v19.1.9/win-x64/node.lib
+https://electronjs.org/headers/v19.1.9/win-x86/node.lib
+https://electronjs.org/headers/v19.1.9/win-arm64/node.lib
+https://electronjs.org/headers/v19.1.9/SHASUMS256.txt
