@@ -1,3 +1,10 @@
+https://chromedevtools.github.io/devtools-protocol/
+
+https://www.selenium.dev/zh-cn/documentation/
+
+https://puppeteer.bootcss.com/
+
+
 ```
 function preloadClearWebdriver(): void {
     Object.defineProperty(navigator, 'webdriver', {
