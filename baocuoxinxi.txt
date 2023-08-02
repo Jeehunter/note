@@ -1,0 +1,23 @@
+jeehunter@jeehunter-PC:~/Desktop/electron-relaunch-main/electron-relaunch-main$ npm install 
+npm WARN deprecated asar@3.2.0: Please use @electron/asar moving forward.  There is no API change, just a package name change
+npm ERR! code 1
+npm ERR! path /home/jeehunter/Desktop/electron-relaunch-main/electron-relaunch-main/node_modules/electron
+npm ERR! command failed
+npm ERR! command sh -c node install.js
+npm ERR! RequestError: unable to verify the first certificate
+npm ERR!     at ClientRequest.<anonymous> (/home/jeehunter/Desktop/electron-relaunch-main/electron-relaunch-main/node_modules/got/dist/source/core/index.js:970:111)
+npm ERR!     at Object.onceWrapper (node:events:642:26)
+npm ERR!     at ClientRequest.emit (node:events:539:35)
+npm ERR!     at ClientRequest.origin.emit (/home/jeehunter/Desktop/electron-relaunch-main/electron-relaunch-main/node_modules/@szmarczak/http-timer/dist/source/index.js:43:20)
+npm ERR!     at TLSSocket.socketErrorListener (node:_http_client:454:9)
+npm ERR!     at TLSSocket.emit (node:events:527:28)
+npm ERR!     at emitErrorNT (node:internal/streams/destroy:157:8)
+npm ERR!     at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+npm ERR!     at processTicksAndRejections (node:internal/process/task_queues:83:21)
+npm ERR!     at TLSSocket.onConnectSecure (node:_tls_wrap:1532:34)
+npm ERR!     at TLSSocket.emit (node:events:527:28)
+npm ERR!     at TLSSocket._finishInit (node:_tls_wrap:946:8)
+npm ERR!     at TLSWrap.ssl.onhandshakedone (node:_tls_wrap:727:12)
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/jeehunter/.npm/_logs/2023-08-01T17_36_04_915Z-debug-0.log
