@@ -21,3 +21,6 @@ npm ERR!     at TLSWrap.ssl.onhandshakedone (node:_tls_wrap:727:12)
 
 npm ERR! A complete log of this run can be found in:
 npm ERR!     /home/jeehunter/.npm/_logs/2023-08-01T17_36_04_915Z-debug-0.log
+
+
+NODE_TLS_REJECT_UNAUTHORIZED
