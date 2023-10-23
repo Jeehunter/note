@@ -1,0 +1,29 @@
+这是npm的http代理设置方法
+
+# 假设本地代理端口为8002
+npm config set proxy http://127.0.0.1:8002
+npm config set https-proxy http://127.0.0.1:8002
+
+# 有用户密码的代理
+npm config set proxy http://username:password@127.0.0.1:8002
+npm confit set https-proxy http://username:password@127.0.0.1:8002
+查看代理
+npm config get or npm config list
+
+清除npm代理
+npm config delete proxy and npm config delete https-proxy
+
+socks5 代理
+npm 不支持 socks 代理，但是我们可以用一个工具将 http 代理转成 socks 代理，然后将 npm 代理地址设置到这个工具的地址。
+
+# 假设本地socks5代理端口为1081
+# 首先安装转换工具
+npm install -g http-proxy-to-socks
+# 然后使用这个工具监听8002端口,支持http代理，然后所有8002的http代理数据都将转换成socks的代理数据发送到1081上
+hpts -s 127.0.0.1:1081 -p 8002
+# 最后设置npm代理为8080
+npm config set proxy http://127.0.0.1:8002
+npm config set https-proxy http://127.0.0.1:8002
+相当于又加了一个中间层，将 http 转成 socks。 hpts -s localhost:1081 -p 8002需要一直开着比较麻烦，但是加速效果还是很不错的。
+
+其他软件如：yarn、gradle...同理
