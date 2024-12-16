@@ -1,7 +1,11 @@
 
 
+#### 打印所有环境变量
+//
+Get-ChildItem Env:
 
 
+Get-ChildItem Env:APPDATA
 
 
 
