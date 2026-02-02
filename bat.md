@@ -46,3 +46,20 @@ Export-PfxCertificate -Cert $cert -FilePath "C:\Path\To\MyTestCertificate.pfx" -
 -FilePath：导出文件路径。
 -Password：为 PFX 文件设置密码。
 
+#### 关于软链：
+ mklink "C:\Users\Public\Desktop\xxxx Agent" "%cd%\xxxxx-agent.exe"
+
+
+ 
+C:\Program Files\xxxx Agent>dir /AL "C:\Users\Public\Desktop\xxxxx Agent"
+ 驱动器 C 中的卷是 SystemDisk
+ 卷的序列号是 F635-2764
+
+ C:\Users\Public\Desktop 的目录
+
+2026/02/02  09:37    <SYMLINK>      CodeArts Agent [C:\Program Files\xxxxx Agent\xxxxx-agent.exe]
+               1 个文件              0 字节
+               0 个目录 25,062,252,544 可用字节
+
+
+###### del "C:\Users\Public\Desktop\xxxx Agent"
