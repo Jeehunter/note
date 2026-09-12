@@ -14,11 +14,11 @@ class Baby extends Nie implements Wang {
         super()
     }
 
-   private life(){
+    public life(){
     // todo list
    }
    
-   public love(i:number){
+    public love(i:number){
     i++
     this.love(i);
    }
@@ -28,5 +28,12 @@ class Baby extends Nie implements Wang {
 
    }
 }
+const baby = new Baby()
+try {
+    baby.life();
+}catch(e){
+    Nie.checkAndHelp(e);
+    Wang.helpAndProtect(e);
+}
 
-new Baby()
+// 这是我写过的最好的代码
